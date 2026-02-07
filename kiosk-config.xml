@@ -2,167 +2,216 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<!-- Configuration format version -->
 	<key>kioskSettings_v2</key>
-	<string>11.0</string>
-	
-	<!-- HOMEPAGE CONFIGURATION -->
-	<!-- Set homepage to the landing page hosted on GitHub Pages -->
-	<key>kp_homepage</key>
-	<string>https://borgand.github.io/taskutark/index.html</string>
+	<dict>
 
-	<!-- REMOTE SETTINGS CONTROL -->
-	<!-- Enable remote configuration updates -->
-	<key>kp_remoteSettings_enable</key>
-	<true/>
+		<!-- Configuration for Taskutark Educational Kiosk -->
+		<!-- Compatible with Kiosk Pro Basic 11.3+ -->
 
-	<!-- URL to this XML file on GitHub Pages -->
-	<key>kp_remoteSettings_xmlFileLocation</key>
-	<string>https://borgand.github.io/taskutark/kiosk-config.xml</string>
-	
-	<!-- Check for updates every 5 minutes -->
-	<key>kp_remoteSettings_updatePeriod</key>
-	<integer>300</integer>
-	
-	<!-- SETTINGS MENU ACCESS -->
-	<!-- Require gesture + passcode to access settings (not shown at app start) -->
-	<key>kp_showSettings</key>
-	<integer>2</integer>
-	
-	<!-- ALLOWED DOMAINS -->
-	<!-- Whitelist educational and study-related websites -->
-	<key>kp_allowedDomains</key>
-	<array>
-		<!-- Primary study platforms -->
-		<string>hiie.ope.ee</string>
-		<string>opiq.ee</string>
-		<string>stuudium.com</string>
-		<string>e-koolikott.ee</string>
-		
-		<!-- Wikipedia (Estonian and English) -->
-		<string>wikipedia.org</string>
-		<string>et.wikipedia.org</string>
-		<string>en.wikipedia.org</string>
-		<string>wikimedia.org</string>
-		<string>wikidata.org</string>
-		
-		<!-- Google services (Translate, general search) -->
-		<string>google.com</string>
-		<string>translate.google.com</string>
-		<string>gstatic.com</string>
-		
-		<!-- Dictionaries and language tools -->
-		<string>sonaveeb.ee</string>
-		<string>eki.ee</string>
-		<string>wordreference.com</string>
-		<string>merriam-webster.com</string>
-		
-		<!-- Educational video platforms -->
-		<string>khanacademy.org</string>
-		
-		<!-- Estonian educational resources -->
-		<string>e-ope.ee</string>
-		<string>haridusportaal.ee</string>
-		<string>innove.ee</string>
-		<string>ekoolikott.ee</string>
-		<string>fyysika.ee</string>
-		<string>bio.edu.ee</string>
-		<string>rara.ee</string>
-		
-		<!-- Mathematics and science tools -->
-		<string>wolframalpha.com</string>
-		<string>desmos.com</string>
-		<string>geogebra.org</string>
-		
-		<!-- Reading and research -->
-		<string>gutenberg.org</string>
-		<string>archive.org</string>
-		
-		<!-- GitHub Pages hosting (for config and landing page) -->
-		<string>borgand.github.io</string>
-		<string>github.io</string>
-		
-		<!-- CDN for resources -->
-		<string>cdnjs.cloudflare.com</string>
-		<string>fonts.googleapis.com</string>
-		<string>fonts.gstatic.com</string>
-	</array>
-	
-	<!-- COOKIE POLICY -->
-	<!-- Allow cookies from all domains (prevents cookie notifications) -->
-	<key>kp_cookieAcceptancePolicy</key>
-	<integer>2</integer>
-	
-	<!-- BLOCKED REQUEST ALERT -->
-	<!-- Show alert when user tries to access blocked site -->
-	<key>kp_blockedRequestAlert_enable</key>
-	<true/>
-	<key>kp_blockedRequestAlert_text</key>
-	<string>See lehekülg ei ole lubatud. Kui see on õppetöö jaoks vajalik, küsi luba.</string>
-	
-	<!-- IDLE TIMER -->
-	<!-- Disable idle timer to allow extended reading periods -->
-	<key>kp_idleTimer_enable</key>
-	<false/>
+		<!-- HOMEPAGE -->
+		<key>homePage</key>
+		<string>https://borgand.github.io/taskutark/index.html</string>
 
-	<!-- APP RESUME BEHAVIOR -->
-	<!-- Preserve current page when returning from background -->
-	<key>kp_navigateHome_onAppLaunch</key>
-	<false/>
-	<key>kp_navigateHome_onWake</key>
-	<false/>
+		<!-- SETTINGS ACCESS -->
+		<!-- Show Settings: 0 = On App Launch; 1 = Never; 2 = On Touch Gesture & Passcode -->
+		<key>settingsShowingOption</key>
+		<integer>2</integer>
 
-	<!-- NAVIGATION BAR -->
-	<!-- Show navigation controls -->
-	<key>kp_navigationBar_showBackButton</key>
-	<true/>
-	<key>kp_navigationBar_showForwardButton</key>
-	<true/>
-	<key>kp_navigationBar_showHomeButton</key>
-	<true/>
+		<!-- Note: Passcode should be set manually in the app, not in remote config -->
 
-	<!-- CUSTOM ACTION BUTTONS -->
-	<!-- Quick access to primary study platforms -->
-	<key>kp_actionButton1_enable</key>
-	<true/>
-	<key>kp_actionButton1_label</key>
-	<string>Stuudium</string>
-	<key>kp_actionButton1_url</key>
-	<string>https://hiie.ope.ee</string>
+		<!-- ALLOWED DOMAINS -->
+		<!-- Whitelist educational and study-related websites -->
+		<key>kp_allowedDomains</key>
+		<array>
+			<!-- Primary study platforms -->
+			<string>hiie.ope.ee</string>
+			<string>opiq.ee</string>
+			<string>stuudium.com</string>
+			<string>e-koolikott.ee</string>
 
-	<key>kp_actionButton2_enable</key>
-	<true/>
-	<key>kp_actionButton2_label</key>
-	<string>Opiq</string>
-	<key>kp_actionButton2_url</key>
-	<string>https://opiq.ee</string>
-	
-	<!-- DISPLAY SETTINGS -->
-	<!-- Hide status bar for cleaner look -->
-	<key>kp_statusBar_visibility</key>
-	<integer>1</integer>
-	
-	<!-- SECURITY -->
-	<!-- Allow automatic focus for form fields -->
-	<key>kp_allowAutomaticFocus</key>
-	<true/>
-	
-	<!-- Enable zoom for better readability -->
-	<key>kp_standardWebPages_zoom</key>
-	<integer>0</integer>
-	
-	<!-- JAVASCRIPT -->
-	<!-- Enable JavaScript for interactive content -->
-	<key>kp_enableJavaScript</key>
-	<true/>
-	
-	<!-- CACHE MANAGEMENT -->
-	<!-- Clear cache on content refresh to free memory -->
-	<key>kp_clearCache_onContentRefresh</key>
-	<false/>
-	
-	<!-- Don't clear cookies on idle (preserve logins) -->
-	<key>kp_clearCookies_onContentRefresh</key>
-	<false/>
+			<!-- Wikipedia (Estonian and English) -->
+			<string>wikipedia.org</string>
+			<string>et.wikipedia.org</string>
+			<string>en.wikipedia.org</string>
+			<string>wikimedia.org</string>
+			<string>wikidata.org</string>
+
+			<!-- Google services (Translate, general search) -->
+			<string>google.com</string>
+			<string>translate.google.com</string>
+			<string>gstatic.com</string>
+
+			<!-- Dictionaries and language tools -->
+			<string>sonaveeb.ee</string>
+			<string>eki.ee</string>
+			<string>wordreference.com</string>
+			<string>merriam-webster.com</string>
+
+			<!-- Educational video platforms -->
+			<string>khanacademy.org</string>
+
+			<!-- Estonian educational resources -->
+			<string>e-ope.ee</string>
+			<string>haridusportaal.ee</string>
+			<string>innove.ee</string>
+			<string>ekoolikott.ee</string>
+			<string>fyysika.ee</string>
+			<string>bio.edu.ee</string>
+			<string>rara.ee</string>
+
+			<!-- Mathematics and science tools -->
+			<string>wolframalpha.com</string>
+			<string>desmos.com</string>
+			<string>geogebra.org</string>
+
+			<!-- Reading and research -->
+			<string>gutenberg.org</string>
+			<string>archive.org</string>
+
+			<!-- GitHub Pages hosting (for config and landing page) -->
+			<string>borgand.github.io</string>
+			<string>github.io</string>
+
+			<!-- CDN for resources -->
+			<string>cdnjs.cloudflare.com</string>
+			<string>fonts.googleapis.com</string>
+			<string>fonts.gstatic.com</string>
+		</array>
+
+		<!-- BLOCKED REQUEST ALERT -->
+		<!-- Show alert when user tries to access blocked site -->
+		<key>showSiteMessage</key>
+		<true/>
+
+		<!-- Blocked Request Alert Text in Estonian -->
+		<key>offDomainMessage</key>
+		<string>See lehekülg ei ole lubatud. Kui see on õppetöö jaoks vajalik, küsi luba.</string>
+
+		<!-- IDLE TIME LIMIT -->
+		<!-- Disable idle timer to allow extended reading periods (empty string = disabled) -->
+		<key>idleTime</key>
+		<string></string>
+
+		<!-- REFRESH HOMEPAGE -->
+		<!-- Don't auto-refresh (0 = disabled) -->
+		<key>refreshTime</key>
+		<string>0</string>
+
+		<!-- CACHE & COOKIES -->
+		<!-- Clear cache on content refresh -->
+		<key>clearCache</key>
+		<false/>
+
+		<!-- Clear cookies on content refresh -->
+		<key>clearCookies</key>
+		<false/>
+
+		<!-- Clear local storage on homepage -->
+		<key>kp_clearLocalStorageOnHomepage</key>
+		<false/>
+
+		<!-- NAVIGATION BAR -->
+		<!-- Show navigation bar -->
+		<key>showNavigationBar</key>
+		<true/>
+
+		<!-- QUICK LINKS / CUSTOM LINKS -->
+		<!-- Enable quick links for Stuudium and Opiq -->
+		<key>customLinksEnabled</key>
+		<true/>
+
+		<!-- Show Quick Links: 0 = On All Pages; 1 = On Homepage Only -->
+		<key>kp_showQuickLinksMode</key>
+		<integer>0</integer>
+
+		<!-- Quick Link 1: Stuudium -->
+		<key>clLabel1</key>
+		<string>Stuudium</string>
+		<key>clLink1</key>
+		<string>https://hiie.ope.ee</string>
+
+		<!-- Quick Link 2: Opiq -->
+		<key>clLabel2</key>
+		<string>Opiq</string>
+		<key>clLink2</key>
+		<string>https://opiq.ee</string>
+
+		<!-- Empty quick links 3-6 -->
+		<key>clLabel3</key>
+		<string></string>
+		<key>clLink3</key>
+		<string></string>
+
+		<key>clLabel4</key>
+		<string></string>
+		<key>clLink4</key>
+		<string></string>
+
+		<key>clLabel5</key>
+		<string></string>
+		<key>clLink5</key>
+		<string></string>
+
+		<key>clLabel6</key>
+		<string></string>
+		<key>clLink6</key>
+		<string></string>
+
+		<!-- DISPLAY SETTINGS -->
+		<!-- Hide iPad status bar for cleaner look -->
+		<key>showStatusBar</key>
+		<false/>
+
+		<!-- Hide address bar -->
+		<key>showAddressBar</key>
+		<false/>
+
+		<!-- Show loading progress indicator -->
+		<key>showLoadingProgress</key>
+		<false/>
+
+		<!-- ZOOM SETTINGS -->
+		<!-- Pinch-to-Zoom: 0 = Disable; 1 = Allow Viewport Control; 2 = Always Allow -->
+		<key>kp_zoomWithStandardBrowserBehavior</key>
+		<integer>1</integer>
+
+		<!-- INTERACTION -->
+		<!-- Fix window to viewport (disable bouncing) -->
+		<key>disableWebViewBouncing</key>
+		<true/>
+
+		<!-- Disable touch callouts -->
+		<key>_kp_disableDefaultCalloutShownWhenTouchAndHoldTarget_</key>
+		<true/>
+
+		<!-- Allow text selection -->
+		<key>textSelection</key>
+		<false/>
+
+		<!-- BROWSER ENGINE -->
+		<!-- Use WKWebView (recommended): 1 = WKWebView; 0 = UIWebView -->
+		<key>kp_browserEngine</key>
+		<integer>1</integer>
+
+		<!-- BROWSING TIME LIMIT -->
+		<!-- -1 = Forever (no time limit) -->
+		<key>browseTime</key>
+		<integer>-1</integer>
+
+		<!-- WEB INSPECTOR -->
+		<!-- Enable Web Inspector for debugging -->
+		<key>kp_isWebInspectorEnabled</key>
+		<true/>
+
+		<!-- RELOAD ON APP RESTART -->
+		<!-- Force reload of remote settings when app relaunches -->
+		<key>kp_clearAppDataOnRelaunch</key>
+		<true/>
+
+		<!-- Update Policy: 0 = Immediately; 1 = Delay While Idle -->
+		<key>kp_remoteUpdatePolicy</key>
+		<integer>0</integer>
+
+	</dict>
 </dict>
 </plist>

@@ -180,12 +180,20 @@
 		<key>disableWebViewBouncing</key>
 		<true/>
 
-		<!-- Disable touch callouts -->
+		<!-- Enable touch callouts (needed for paste menu) -->
 		<key>_kp_disableDefaultCalloutShownWhenTouchAndHoldTarget_</key>
+		<false/>
+
+		<!-- Allow text selection (needed for copy/paste) -->
+		<key>textSelection</key>
 		<true/>
 
-		<!-- Allow text selection -->
-		<key>textSelection</key>
+		<!-- Allow automatic focus for form fields -->
+		<key>kp_showKeyboardAutomaticallyOnFocusEvent</key>
+		<true/>
+
+		<!-- Enable iOS AutoFill for passwords and passkeys -->
+		<key>kp_disable_UIMenuAutoFill</key>
 		<false/>
 
 		<!-- BROWSER ENGINE -->

@@ -203,10 +203,10 @@
 		<key>kp_isWebInspectorEnabled</key>
 		<true/>
 
-		<!-- RELOAD ON APP RESTART -->
-		<!-- Force reload of remote settings when app relaunches -->
+		<!-- PRESERVE PAGE STATE -->
+		<!-- Don't clear app data on relaunch (preserves current page) -->
 		<key>kp_clearAppDataOnRelaunch</key>
-		<true/>
+		<false/>
 
 		<!-- Update Policy: 0 = Immediately; 1 = Delay While Idle -->
 		<key>kp_remoteUpdatePolicy</key>

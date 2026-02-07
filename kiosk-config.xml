@@ -38,7 +38,7 @@
 	<key>kp_allowedDomains</key>
 	<array>
 		<!-- Primary study platforms -->
-		<string>ope.hiie.ee</string>
+		<string>hiie.ope.ee</string>
 		<string>opiq.ee</string>
 		<string>stuudium.com</string>
 		<string>e-koolikott.ee</string>

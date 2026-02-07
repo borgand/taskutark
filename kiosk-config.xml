@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Configuration format version -->
+	<key>kioskSettings_v2</key>
+	<string>11.0</string>
+	
+	<!-- HOMEPAGE CONFIGURATION -->
+	<!-- Set homepage to the landing page hosted on GitHub Pages -->
+	<key>kp_homepage</key>
+	<string>https://borgand.github.io/taskutark/index.html</string>
+
+	<!-- REMOTE SETTINGS CONTROL -->
+	<!-- Enable remote configuration updates -->
+	<key>kp_remoteSettings_enable</key>
+	<true/>
+
+	<!-- URL to this XML file on GitHub Pages -->
+	<key>kp_remoteSettings_xmlFileLocation</key>
+	<string>https://borgand.github.io/taskutark/kiosk-config.xml</string>
+	
+	<!-- Check for updates every 5 minutes -->
+	<key>kp_remoteSettings_updatePeriod</key>
+	<integer>300</integer>
+	
+	<!-- SETTINGS MENU ACCESS -->
+	<!-- Require gesture + passcode to access settings (not shown at app start) -->
+	<key>kp_showSettings</key>
+	<integer>2</integer>
+	
+	<!-- Set passcode for settings access -->
+	<key>kp_showSettings_passcode</key>
+	<string>1234</string>
+	
+	<!-- ALLOWED DOMAINS -->
+	<!-- Whitelist educational and study-related websites -->
+	<key>kp_allowedDomains</key>
+	<array>
+		<!-- Primary study platforms -->
+		<string>ope.hiie.ee</string>
+		<string>opiq.ee</string>
+		<string>stuudium.com</string>
+		<string>e-koolikott.ee</string>
+		
+		<!-- Wikipedia (Estonian and English) -->
+		<string>wikipedia.org</string>
+		<string>et.wikipedia.org</string>
+		<string>en.wikipedia.org</string>
+		<string>wikimedia.org</string>
+		<string>wikidata.org</string>
+		
+		<!-- Google services (Translate, general search) -->
+		<string>google.com</string>
+		<string>translate.google.com</string>
+		<string>gstatic.com</string>
+		
+		<!-- Dictionaries and language tools -->
+		<string>sonaveeb.ee</string>
+		<string>dict.com</string>
+		<string>dictionary.com</string>
+		<string>wordreference.com</string>
+		<string>merriam-webster.com</string>
+		
+		<!-- Educational video platforms -->
+		<string>khanacademy.org</string>
+		
+		<!-- Estonian educational resources -->
+		<string>e-ope.ee</string>
+		<string>haridusportaal.ee</string>
+		<string>innove.ee</string>
+		<string>ekoolikott.ee</string>
+		
+		<!-- Mathematics and science tools -->
+		<string>wolframalpha.com</string>
+		<string>desmos.com</string>
+		<string>geogebra.org</string>
+		
+		<!-- Reading and research -->
+		<string>gutenberg.org</string>
+		<string>archive.org</string>
+		
+		<!-- GitHub Pages hosting (for config and landing page) -->
+		<string>borgand.github.io</string>
+		<string>github.io</string>
+		
+		<!-- CDN for resources -->
+		<string>cdnjs.cloudflare.com</string>
+		<string>fonts.googleapis.com</string>
+		<string>fonts.gstatic.com</string>
+	</array>
+	
+	<!-- COOKIE POLICY -->
+	<!-- Allow cookies for login sessions -->
+	<key>kp_cookieAcceptancePolicy</key>
+	<integer>0</integer>
+	
+	<!-- Retain cookies for login persistence -->
+	<key>kp_retainCookies_domains</key>
+	<array>
+		<string>ope.hiie.ee</string>
+		<string>opiq.ee</string>
+		<string>google.com</string>
+	</array>
+	
+	<!-- BLOCKED REQUEST ALERT -->
+	<!-- Show alert when user tries to access blocked site -->
+	<key>kp_blockedRequestAlert_enable</key>
+	<true/>
+	<key>kp_blockedRequestAlert_text</key>
+	<string>See lehekülg ei ole lubatud. Kui see on õppetöö jaoks vajalik, küsi luba.</string>
+	
+	<!-- NAVIGATION BAR -->
+	<!-- Show navigation controls -->
+	<key>kp_navigationBar_showBackButton</key>
+	<true/>
+	<key>kp_navigationBar_showForwardButton</key>
+	<true/>
+	<key>kp_navigationBar_showHomeButton</key>
+	<true/>
+	
+	<!-- DISPLAY SETTINGS -->
+	<!-- Hide status bar for cleaner look -->
+	<key>kp_statusBar_visibility</key>
+	<integer>1</integer>
+	
+	<!-- SECURITY -->
+	<!-- Allow automatic focus for form fields -->
+	<key>kp_allowAutomaticFocus</key>
+	<true/>
+	
+	<!-- Enable zoom for better readability -->
+	<key>kp_standardWebPages_zoom</key>
+	<integer>0</integer>
+	
+	<!-- JAVASCRIPT -->
+	<!-- Enable JavaScript for interactive content -->
+	<key>kp_enableJavaScript</key>
+	<true/>
+	
+	<!-- CACHE MANAGEMENT -->
+	<!-- Clear cache on content refresh to free memory -->
+	<key>kp_clearCache_onContentRefresh</key>
+	<false/>
+	
+	<!-- Don't clear cookies on idle (preserve logins) -->
+	<key>kp_clearCookies_onContentRefresh</key>
+	<false/>
+</dict>
+</plist>

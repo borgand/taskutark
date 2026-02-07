@@ -97,7 +97,7 @@
 	<!-- Retain cookies for login persistence -->
 	<key>kp_retainCookies_domains</key>
 	<array>
-		<string>ope.hiie.ee</string>
+		<string>hiie.ope.ee</string>
 		<string>opiq.ee</string>
 		<string>google.com</string>
 	</array>
@@ -109,6 +109,11 @@
 	<key>kp_blockedRequestAlert_text</key>
 	<string>See lehekülg ei ole lubatud. Kui see on õppetöö jaoks vajalik, küsi luba.</string>
 	
+	<!-- IDLE TIMER -->
+	<!-- Disable idle timer to allow extended reading periods -->
+	<key>kp_idleTimer_enable</key>
+	<false/>
+
 	<!-- NAVIGATION BAR -->
 	<!-- Show navigation controls -->
 	<key>kp_navigationBar_showBackButton</key>
@@ -117,6 +122,22 @@
 	<true/>
 	<key>kp_navigationBar_showHomeButton</key>
 	<true/>
+
+	<!-- CUSTOM ACTION BUTTONS -->
+	<!-- Quick access to primary study platforms -->
+	<key>kp_actionButton1_enable</key>
+	<true/>
+	<key>kp_actionButton1_label</key>
+	<string>Stuudium</string>
+	<key>kp_actionButton1_url</key>
+	<string>https://hiie.ope.ee</string>
+
+	<key>kp_actionButton2_enable</key>
+	<true/>
+	<key>kp_actionButton2_label</key>
+	<string>Opiq</string>
+	<key>kp_actionButton2_url</key>
+	<string>https://opiq.ee</string>
 	
 	<!-- DISPLAY SETTINGS -->
 	<!-- Hide status bar for cleaner look -->

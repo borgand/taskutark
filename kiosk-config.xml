@@ -29,10 +29,6 @@
 	<key>kp_showSettings</key>
 	<integer>2</integer>
 	
-	<!-- Set passcode for settings access -->
-	<key>kp_showSettings_passcode</key>
-	<string>1234</string>
-	
 	<!-- ALLOWED DOMAINS -->
 	<!-- Whitelist educational and study-related websites -->
 	<key>kp_allowedDomains</key>

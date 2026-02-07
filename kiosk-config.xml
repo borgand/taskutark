@@ -53,8 +53,7 @@
 		
 		<!-- Dictionaries and language tools -->
 		<string>sonaveeb.ee</string>
-		<string>dict.com</string>
-		<string>dictionary.com</string>
+		<string>eki.ee</string>
 		<string>wordreference.com</string>
 		<string>merriam-webster.com</string>
 		
@@ -90,17 +89,9 @@
 	</array>
 	
 	<!-- COOKIE POLICY -->
-	<!-- Allow cookies for login sessions -->
+	<!-- Allow cookies from all domains (prevents cookie notifications) -->
 	<key>kp_cookieAcceptancePolicy</key>
-	<integer>0</integer>
-	
-	<!-- Retain cookies for login persistence -->
-	<key>kp_retainCookies_domains</key>
-	<array>
-		<string>hiie.ope.ee</string>
-		<string>opiq.ee</string>
-		<string>google.com</string>
-	</array>
+	<integer>2</integer>
 	
 	<!-- BLOCKED REQUEST ALERT -->
 	<!-- Show alert when user tries to access blocked site -->
@@ -112,6 +103,13 @@
 	<!-- IDLE TIMER -->
 	<!-- Disable idle timer to allow extended reading periods -->
 	<key>kp_idleTimer_enable</key>
+	<false/>
+
+	<!-- APP RESUME BEHAVIOR -->
+	<!-- Preserve current page when returning from background -->
+	<key>kp_navigateHome_onAppLaunch</key>
+	<false/>
+	<key>kp_navigateHome_onWake</key>
 	<false/>
 
 	<!-- NAVIGATION BAR -->
